@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let user = {
+            name: "Oat",
+            age: 30,
+            "computer skill": null
+        };
+
+        alert( user.age ); // 30
+        alert( user.name ); // "Oat"
+
+        user.height = 176;
+        user.isSingle = true;
+
+        console.log( user.height )
+        console.log( user.isSingle )
+
+        // ลบ height
+        delete user.height
+        
+        // ดูค่า height
+        console.log( user.height )
+
+        alert( user["computer skill"] ); // null
+        // alert( user."computer skill" ); // Error
+        // alert( user.computer skill); // Error
+
+        
+
+    </script>
+</body>
+</html>

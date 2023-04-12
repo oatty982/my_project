@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion</title>
+</head>
+<body>
+    <script>
+        let var1 = true;
+        console.log(typeof var1) // boolean
+        var1 = String(var1);
+        console.log(var1); // กลายเป็น "true"
+        console.log(typeof var1); // string
+
+        let var2 = false;
+        console.log(typeof var2) // boolean
+        var2 = String(var2);
+        console.log(var2); // กลายเป็น "false"
+        console.log(typeof var2); // string
+
+        let var3 = null;
+        console.log(typeof var3) // object
+        var3 = String(var3);
+        console.log(var3); // กลายเป็น "null"
+        console.log(typeof var3); // string
+
+        let value = "9" / "4.5";
+        console.log(typeof value); // number
+        console.log(value); // ได้เป็น number = 2
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = prompt("User name is :")
+
+        function show2() {
+            console.log("Hello, " + user)
+            alert("Hello, " + user)
+        }
+
+        function show3() {
+            for(let i=1; i<4; i++)
+            console.log(i + ": Hello " + user)
+        }
+
+        function changeUser() {
+            let user
+            user = "React.JS"
+            console.log("My local var :user = " + user)
+        }
+
+        show2()
+        show3()
+        changeUser()
+        console.log(user);
+    </script>
+</body>
+</html>

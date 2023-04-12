@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kumkom{
+            border: 2px solid gray;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+        ::selection{
+            background-color: salmon;
+        }
+        .kumkom-text::first-line{
+            font-size: 30px;
+        }
+        .kumkom::before,
+        .kumkom::after{
+            content: '"';
+            font-size: 60px;
+            color: red;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>คำคมวันนี้</h2>
+    <h4>มีอยู่ว่า</h4>
+    <blockquote class="kumkom">
+        <div class="kumkom-text">
+            คำว่ารักคงยังไม่พอ <br>เธอคงไม่ใช้ตังค์
+        </div>
+    </blockquote>
+</body>
+</html>

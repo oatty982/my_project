@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // หาค่าตัวเลขจากอักขระ
+        console.log( "a".codePointAt() ); // 97
+        console.log( "Z".codePointAt() ); // 90
+
+        // สร้างตัวขระจากค่าตัวเลข
+        console.log( String.fromCodePoint(97) ); // a
+        console.log( String.fromCodePoint(90) ); // Z
+
+        console.log( "Widget with id".includes("Widget") ); // true
+        console.log( "Hello".includes("Bye") ); // false
+
+        console.log( "Widget".includes("id") ); // true
+        console.log( "Widget".includes("id",2) ); // false
+
+        console.log( "Widget" )
+        console.log( "Widget".startsWith("Wid")); // true
+        console.log( "Widget".endsWith("get")); // true
+
+        let str = 'กรุงเทพมหานคร'
+        console.log(str) // กรุงเทพมหานคร
+        console.log(str.replace('นคร','เมืองฟ้า')) // กรุงเทพมหาเมืองฟ้า
+
+    </script>
+</body>
+</html>

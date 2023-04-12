@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nm = [5,7,-4,-2,9,-8,10,8]
+
+        function compare2(a,b){
+            let aa = Math.abs(a)
+            let bb = Math.abs(b)
+            return (aa>bb)? 1 : (aa<bb)? -1 : 0
+        }
+
+        console.log(nm.sort(compare2)) // [-2, -4, 5, 7, -8, 8, 9, 10]
+    </script>
+</body>
+</html>

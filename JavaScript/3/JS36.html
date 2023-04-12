@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = { name: "John" };
+        let admin = { name: "Admin" };
+
+        function sayHi() {
+            alert( this.name);
+        }
+
+        // ใส่ function sayhi ไม่ให้ทั้งสอง Object
+        user.f = sayHi;
+        admin.f = sayHi;
+
+        // การเรียกฟังก์ชันทั้งสองครั้งนี้ จะแยกต่างกัน
+        user.f(); // John (this จะหมายถึง user)
+        admin.f(); // Admin (this จะหมายถึง admin)
+
+        admin['f'](); // Admin (dot หรือ square brackets ก็ได้)
+    </script>
+</body>
+</html>

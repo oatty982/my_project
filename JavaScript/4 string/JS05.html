@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Happy New Year"
+
+        console.log( str.length ); // 14
+        console.log( "Hello World".length ); // 11
+        console.log( `My\nName`.length ); // 7
+        console.log( `My\tName`.length ); // 7
+        console.log( `แพง`.length ); // 3
+        console.log( `เเพง`.length ); // 4
+        console.log( `\u{1f600}`);
+        console.log( `😀`.length ); // 2
+        console.log( `\u{1f600}`.length ); // 2
+        console.log('\uD83D\uDE00'); // => '😀'
+        console.log('\uD83D\uDE00' === `\u{1f600}` ); // มีค่าเท่ากัน
+        console.log('\uD83D'); // ถ้าพิมพ์โดดๆจะไม่มีค่าออกมา
+
+    </script>
+</body>
+</html>

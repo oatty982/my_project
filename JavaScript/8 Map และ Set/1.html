@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // new Map() - สร้าง Map ขึ้นมาใหม่
+        // map.set(key, value) - เก็บ key และ value ลง Map
+        // map.get(key) - คืนค่า value ของ key ใน Map, undefined ถ้า key นั้นไม่มีอยู่ใน Map
+        // map.has(key) - เป็นค่า true ถ้า Map นั้นมี key
+        // map.delete(key) - ลบ value ที่มี key ออกจาก Map
+        // map.clear() - ลบทุกอย่างออกจาก Map
+        // map.size - คืนค่าเป็นขนาดของ Map
+
+        let user = {
+            name : 'John',
+            age : 24,
+            gender : 'male',
+            from : 'bkk'
+        }
+        
+        console.log(user.age)
+
+        console.log(user["age"])
+
+        let m_user = new Map(
+            [
+                ['name', 'john'],
+                ['age', '24'],
+                ['gender', 'male'],
+                ['from', 'bkk']
+            ]
+        )
+
+        console.log(user)
+        console.log(m_user)
+    </script>
+</body>
+</html>

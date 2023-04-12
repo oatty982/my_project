@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'The String type is the set of all ordered sequences of zero or more 16-bit unsigned integer values (“elements”) up to a maximum length of 253 - 1 elements. The String type is generally used to represent textual data in a running ECMAScript program, in which case each element in the String is treated as a UTF-16 code unit value. Each element is regarded as occupying a position within the sequence. These positions are indexed with non-negative integers. The first element (if any) is at index 0, the next element (if any) at index 1, and so on. The length of a String is the number of elements (i.e., 16-bit values) within it. The empty String has length zero and therefore contains no elements.';
+        // let searchStr = prompt('Text to search');
+        let searchStr = "String";
+        let n = 0;
+        let positions = [];
+
+        for(let i = str.indexOf(searchStr); i >= 0; i = str.indexOf(searchStr, i + 1)) {
+            // console.log(i);
+            positions.push(i);
+            n++;
+        }
+
+        console.log(positions)
+
+        if (n === 0) {
+        console.log('Not Found!!!');
+        } else {
+        console.log('Amount: ' + n);
+        }
+
+       // เอา 4 มาบวกต่อตามจำนวนของ searchStr.length = 6
+       let result = [];
+
+        for (let i = 0; i < positions.length; i++) {
+        let range = [];
+
+        for (let j = 0; j < searchStr.length; j++) {
+            range.push(positions[i] + j);
+        }
+        result.push(range);
+        }
+
+        console.log(result); // [[4, 5, 6, 7, 8, 9],[160, 161, 162, 163, 164, 165],[283, 284, 285, 286, 287, 288],[563, 564, 565, 566, 567, 568],[639, 640, 641, 642, 643, 644]]
+
+        let k = "";
+
+        for (let i = 0; i < result.length; i++) {
+            let w = "";
+            for (let j = 0; j < result[i].length; j++) {
+                w += str[result[i][j]];
+            }
+            k += w + "\n";
+            console.log(w);
+        }
+
+        console.log(k);
+
+    </script>
+</body>
+</html>

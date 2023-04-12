@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CSS Box model</title>
+    <style>
+        div{
+            margin: 5px 5px 5px 5px;
+            /* border width: 5px; */
+            /* border width: thick; */
+            /* border width: medium; */
+            /* border-width: 2px 4px 6px 8px; */
+            /* border-color: red green blue yellow; */
+        }
+        #d1 {
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            padding: 20px;
+            border: 10px solid lightcoral;
+            margin-bottom: 10px;
+        }
+        #d2 {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            padding: 20px;
+            border-style: dashed;
+            border-radius: 50%;
+            border-width: 5px;
+            /* border: 10px solid lightcoral; */
+            margin-top: 20px;
+        }
+        div.dotted {
+            border-style: dotted;
+        }
+        div.dached{
+            border-style: dashed;
+        }
+        div.soild{
+            border-style: solid;
+        }
+        div.double{
+            border-style: double;
+        }
+        div.groove{
+            border-style: groove;
+        }
+        div.ridge{
+            border-style: ridge;
+        }
+        div.inset{
+            border-style: inset;
+        }
+        div.outset{
+            border-style: outset;
+        }
+        div.none{
+            border-style: none;
+        }
+        div.hidden{
+            border-style: hidden;
+        }
+        div.mix{
+            border-style: inset dotted solid ridge;
+        }
+        p{
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-left-style: ridge;
+            border-bottom-style: dashed;
+            border-left-width: 10px;
+            width: 300px;
+        }
+        h1{
+            background: aquamarine;
+            width: 300px;
+            height: 100px;
+        }
+        h1.h1_B{
+            margin: 50px;
+            box-shadow: 20px 20px black;
+            /* border: 10px solid blue;  */
+            /* padding: 20px;  */
+            /* outline: 5px dashed red;  */
+            /* outline-offset: 10px;  */
+            /* outline-width: 20px; */
+            /* box-sizing: border-box; */
+        }
+        #paral{
+            text-align: center;
+            color:red;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <p id="paral">Hello World!</p>
+    <h1>Header A</h1>
+    <h1 class="h1_B">Header B</h1>
+    <h1>Header C</h1>
+    <p>PpPpPpPpPpPpP</p>
+    <div id="d1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <div id="d2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <br><br>
+    <div class="dotted">dotted</div>
+    <div class="dached">dached</div>
+    <div class="soild">soild</div>
+    <div class="double">double</div>
+    <div class="groove">groove</div>
+    <div class="ridge">ridge</div>
+    <div class="inset">inset</div>
+    <div class="outset">outset</div>
+    <div class="none">none</div>
+    <div class="hidden">hidden</div>
+    <div class="mix">mix</div>
+</body>
+</html>

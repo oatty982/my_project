@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fruits = ["Apple", "Orange", "Plum"]
+
+        let products = [
+            { pname : 'Apple', price : 100 },
+            { pname : 'Orange', price : 200 },
+            { pname : 'Grape', price : 300 }
+        ];
+
+        let product = products.find( item => item.price > 200)
+
+        console.log(product.pname,product.price)
+    </script>
+</body>
+</html>

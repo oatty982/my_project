@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let fruits = ["Apple","Orange","Pear","Mango","Grape","Pineap"];
+        console.log(fruits) // ['Apple', 'Orange', 'Pear', 'Mango', 'Grape', 'Pineap']
+
+        fruits.push("Papaya") // เพิ่ม Papaya ข้างหลัง
+        console.log(fruits) // ['Apple', 'Orange', 'Pear', 'Mango', 'Grape', 'Pineap', 'Papaya']
+
+        let a = fruits.shift() // เอาตัวแรกออกไป
+
+        console.log(a) // Apple
+
+        console.log(fruits) // ['Orange', 'Pear', 'Mango', 'Grape', 'Pineap', 'Papaya']
+
+        let b = fruits.pop() // เอาตัวท้ายออกไป
+
+        console.log(b) // Papaya
+
+        console.log(fruits) // ['Orange', 'Pear', 'Mango', 'Grape', 'Pineap']
+
+        let c = fruits.unshift('Apple') // เอาแค่ 'Apple' กลับมาอันแรก
+
+        console.log(c) // 6
+
+        console.log(fruits) // ['Apple', 'Orange', 'Pear', 'Mango', 'Grape', 'Pineap']
+
+    </script>
+</body>
+</html>

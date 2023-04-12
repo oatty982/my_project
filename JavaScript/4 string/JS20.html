@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('ก'.charCodeAt()) // 3585
+        console.log('ข'.charCodeAt()) // 3586
+        console.log('ก'.charCodeAt().toString(2)) // 111000000001
+        console.log('ข'.charCodeAt().toString(2)) // 111000000010
+        console.log('ก'.charCodeAt().toString(8)) // 7001
+        console.log('ข'.charCodeAt().toString(8)) // 7002
+        console.log('ก'.charCodeAt().toString(16)) // e01
+        console.log('ข'.charCodeAt().toString(16)) // e02
+        console.log('\u0e01') // ก
+        console.log('\u{1f600}'.codePointAt()) // 128512
+        console.log('\u{1f600}'.charCodeAt()) // 55357
+        console.log('\u{1f600}');
+        console.log('\u{1f600}'.codePointAt().toString(16)) // 1f600
+        console.log('\u{1f600}'.charCodeAt().toString(16)) // d83d 
+    </script>
+</body>
+</html>

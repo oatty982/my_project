@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log( 0.1 + 0.2 == 0.3 ); // false
+        console.log( 0.1 + 0.2 ); // 0.30000000000000004
+
+        let sum = 0.1 + 0.2
+        console.log(sum.toFixed(2)) // 0.30
+        console.log((0.1+0.2).toFixed(2)) // 0.30
+        console.log(0.1+0.2.toFixed(2)) // 0.10.20 string
+
+        console.log( isNaN(NaN)); // true
+        console.log( isNaN("str")); // true
+        console.log( isNaN(123)); // false เพราะเป็นตัวเลข
+
+        console.log( isFinite("15")) // true
+        console.log( isFinite("str")) // false, เพราะเป็น NaN
+        console.log( isFinite(Infinity)) // false, เพราะเป็น infinity
+
+        console.log(1e308) // 1e+308
+        console.log(1e309) // Infinity
+        console.log(-1e308) // -1e+308
+        console.log(-1e309) // Infinity
+
+        console.log(isFinite(1e308)) //true
+        console.log(isFinite(1e309)) //false
+        console.log(isFinite(-1e308)) //true
+        console.log(isFinite(-1e309)) //false
+        console.log(isFinite(1 * "100")) //true
+        console.log(isFinite(1 * "a")) //false
+        console.log(Infinity) // Infinity
+        console.log(typeof Infinity) // number
+        console.log(typeof NaN) // number
+        console.log(null) // null
+        console.log(undefined) // undefined
+
+        console.log( parseInt('100px')) // 100
+        console.log( parseFloat('12.5em')) // 12.5
+        console.log( parseInt('12.3')) // 12
+        console.log( parseFloat('12.3.4')) // 12.3
+
+        console.log( Math.random() ); // 0.20829872417285067
+        console.log( Math.random() ); // 0.9036189960590422
+        console.log( Math.random() ); // 0.41979393058767234
+
+        console.log( Math.max(3, 5, -10, 0, 1)); // 5
+        console.log( Math.min(3, 5, -10, 0, 1)); // -10
+
+        console.log( Math.pow(2, 10) ); // 2 ยกกำลัง 10 = 1024
+
+    </script>
+</body>
+</html>

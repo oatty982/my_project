@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [
+            { pname : 'Apple', price : 100},
+            { pname : 'Orange', price : 200},
+            { pname : 'Grape', price : 300}
+        ]
+        
+        products.push( {pname : 'Mango', price : 400} )
+
+        products.push( {} )
+
+        products[4].pname = "Pineapple"
+        products[4].price = 500
+
+        console.log(products)
+
+        let pp = products.pop()
+
+        console.log(pp)
+
+        console.log(products)
+
+    </script>
+</body>
+</html>

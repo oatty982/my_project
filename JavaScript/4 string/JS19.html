@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "stringify";
+
+        // 1
+        console.log('---1---')
+        console.log( str.slice(0, 5) ); // 'strin', เลือกจากตำแหน่งที่ 0 ถึง 5 (แต่ไม่เอาตำแหน่งที่ 5)
+        console.log( str.slice(0, 1) ); // 's', เลือกจากตำแหน่งที่ 0 ถึง 1 (แต่ไม่เอาตำแหน่งที่ 1)
+        console.log( str.slice(2)); // 'ringify', เลือกจากตำแหน่งที่ 2 จนถึงตัวสุดท้าย
+        console.log( str.slice(-4,-1)); // 'gif'
+
+        // 2
+        console.log('---2---')
+        console.log( str.substring(2) ); // 'ringify'
+        console.log( str.slice(2) ); // 'ringify' ได้ผลลัพธ์เหมือนกัน
+        console.log( str.substring(1,5) ); // 'strin'
+        console.log( str.slice(1, 5) ); // 'strin' ได้ผลลัพธ์เหมือนกัน
+
+        // 3
+        console.log('---3---')
+        console.log( str.slice(2) ); // 'ringify'
+        console.log( str.substr(2) ); // 'ringify' ได้ผลลัพธ์เหมือนกัน
+        console.log( str.slice(1, 5) ); // 'trin'
+        console.log( str.substr(1, 4) ); // 'trin' ได้ผลลัพธ์เหมือนกัน
+
+        console.log( 'a' > 'Z' ); // true
+    </script>
+</body>
+</html>

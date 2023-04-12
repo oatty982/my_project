@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names = 'Bilbo, Gandalf, Nazgul';
+
+        let arr = names.split(', ');
+
+        console.log(arr); // ['Bilbo', 'Gandalf', 'Nazgul']
+
+        let rs = arr.map ( x => `To ${x.toLowerCase()}`)
+
+        console.log(rs) // ['To bilbo', 'To gandalf', 'To nazgul']
+
+        let ra = rs.join("-")
+
+        console.log(ra) // To bilbo-To gandalf-To nazgul
+
+        let arr1 = ra.split('-');
+
+        console.log(arr1); // ['To bilbo', 'To gandalf', 'To nazgul']
+
+    </script>
+</body>
+</html>

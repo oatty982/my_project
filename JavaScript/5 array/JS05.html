@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [
+            { pname : 'Apple', price : 100},
+            { pname : 'Orange', price : 200},
+            { pname : 'Grape', price : 300}
+        ]
+        console.log(products)
+        console.log(products[0]) // {pname: 'Apple', price: 100} 
+        console.log(products[0].pname) // Apple
+        console.log(products[0].price) // 100
+
+        for(let i=0; i<products.length; i++) {
+            console.log(products[i].pname + '\t' + products[i].price)
+        } 
+        
+        // Apple	100
+        // Orange	200
+        // Grape	300
+
+    </script>
+</body>
+</html>

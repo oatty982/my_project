@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str = "Hello"
+
+        // alert( str.toUpperCase() ); // HELLO
+
+        // let billion = 1000000;
+
+        // let billion = 1e9; // 1พันล้าน | ประกอบด้วย 1 และ 0 เก้าตัว
+        // let billion = 7.3e9 // “7.3พันล้าน” จะได้เป็น “7,300,000,000”
+
+        1e3 // = 1*1000
+        1.23e6 // = 1.23 * 1000000
+        1.2300000000e6
+        1e1
+        1e-1
+        1e-2
+        1e-3
+        1e-4
+        1e-5
+        2.23e-5
+
+        // alert( 0xff ); // 255
+        // alert( 0xFF ); // 255 พิมพ์ใหญ่หรือพิมพ์เล็กไม่สำคัญ
+
+        // bf // = 191 
+        // ff // 16x16 = 255 wtf
+
+        0b11111111; // 2x2x2x2x2x2x2x2 = 255
+
+        00 // = 0
+        40 // 16*4 = 64
+        80 // 16*8 = 128
+        0xb // 11
+        0xbf // 11.9375x16 = 191
+        0xff // 16x16 = 255
+        0o7 // 7
+        0o10 // 8+0 = 8
+        0o11 // 8+1 = 9
+        0o16 // 8+6 = 14
+        0o30 // 8x3 = 24
+        0o31 // (8x3)+1 = 25
+        0o37 // (8x3)+7 = 31
+        0o370 // ((8x3)+7)x8 = 248
+        0o300 // 3x8x8 = 192
+        0o307 // ((8x3)x8)+7 = 199
+        0o377 // ((8x3)+7)x8)+7 = 255
+        
+        // let a = 0b11111111; // 2x2x2x2x2x2x2x2 = 255
+        // let b = 0o377; // ((8x3)+7)x8)+7 = 255
+        // alert( a == b ); // true, the same number 255 at both sides
+
+        let num = 255;
+        console.log( num.toString(16)); // ff
+        console.log( num.toString(2)); // 11111111
+        console.log( num.toString()); // 255
+        0b11111111 === 0xff
+
+        console.log(Math.floor(3.6)); // output : 3
+        console.log(Math.floor(3.1)); // output : 3
+        console.log(Math.floor(-1.6)); // output : -2
+        console.log(Math.floor(-1.1)); // output : -2
+    </script>
+</body>
+</html>

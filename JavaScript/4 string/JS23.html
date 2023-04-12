@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function ucFirst(string) {
+        // If the string is empty, return it as is
+        if (string === '') {
+            return string;
+        }
+        
+        // Otherwise, capitalize the first letter and return the modified string
+        return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        console.log(ucFirst('patcharapon')); // Output: Patcharapon
+        console.log(ucFirst('chaiporn')); // Output: Chaiporn
+
+        truncate("What I'd like to tell on this topic is:", 20) = "What I'd like to te..."
+
+        truncate("Hi everyone!",20) = "Hi everyone!"
+
+        alert( extractCurrencyValue('$120', 30.5) === 3660 ); // true
+
+    </script>
+</body>
+</html>
