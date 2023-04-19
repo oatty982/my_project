@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showName() {
+            alert( arguments.length );
+            alert( arguments[0] );
+            alert( arguments[1] );
+
+            // มีคุณสมบัติ iterable ด้วยนะ
+            // for(let arg of arguments) alert(arg);
+        }
+
+        // 2, Julius, Caesar
+        showName("Julius", "Caesar");
+
+        // 1, Ilya, undefined (ไม่มี argument ตัวที่สอง)
+        showName("Ilya");
+    </script>
+</body>
+</html>

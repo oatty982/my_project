@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3];
+
+        // ถ่ายทอดมาจาก Array.prototype?
+        alert( arr.__proto__ === Array.prototype ); // true
+
+        // อันนี้ล่ะ มาจาก Object.prototype?
+        alert( arr.__proto__.__proto__ === Object.prototype ); // true
+
+        // และก็เป็น null เมื่อขึ้นไปถึงข้างบนสุด.
+        alert( arr.__proto__.__proto__.__proto__ ); // null
+
+        console.dir([1, 2, 3])
+    </script>
+</body>
+</html>

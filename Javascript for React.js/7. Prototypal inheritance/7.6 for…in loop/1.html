@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal = {
+            eats: true
+        };
+
+        let rabbit = {
+            jumps: true,
+            __proto__: animal
+        };
+
+        // Object.keys คืนค่าแค่ keys ของมันเอง
+        alert(Object.keys(rabbit)); // jumps
+        alert(Object.keys(animal)); // 
+
+        // for..in loops คืนค่าทั้ง keys ของมันและ key ที่ถูกถ่ายทอดมาด้วย
+        for(let prop in rabbit) alert(prop); // jumps, then eats
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = { a: 1, b: 2, c: 3 };
+
+        let objCopy = { ...obj }; // spread object ให้กลายเป็น list ของ parameters
+
+        // แล้วก็ return ผลลัพธ์เข้าไปใน object ใหม่
+
+        // objects ทั้งสองอันมีเนื้อหาที่เหมือนกันไหม ?
+
+        alert(JSON.stringify(obj) === JSON.stringify(objCopy)); // true
+
+        // objects ทั้งสองเท่ากันไหม ?
+
+        alert(obj === objCopy); // false (reference ไม่เหมือนกัน)
+
+        // ลองเปลี่ยนบางอย่างใน object แรก, แต่ไม่เปลี่ยนใน object ที่ copy มา:
+
+        // เพื่อให้เห็นว่าเป็นการ copy by value
+
+        obj.d = 4;
+
+        alert(JSON.stringify(obj)); // {"a":1,"b":2,"c":3,"d":4}
+
+        alert(JSON.stringify(objCopy)); // {"a":1,"b":2,"c":3}
+    </script>
+</body>
+</html>

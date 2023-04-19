@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+        name: 'John',
+        age: 30,
+        address: {
+            city: 'New York',
+            state: 'NY'
+        }
+        };
+
+        let clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
+
+        console.log(clone); // { name: 'John', age: 30, address: { city: 'New York', state: 'NY' } }
+
+        console.log(clone === obj); // false
+
+        console.log(clone.address === obj.address); // true
+    </script>
+</body>
+</html>
