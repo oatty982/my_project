@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        
+        speak() {
+            alert(`${this.name} makes a noise.`);
+        }
+        }
+
+        class Rabbit extends Animal {
+        constructor(name) {
+            super(name);
+        }
+        
+        speak() {
+            alert(`${this.name} says 'I am a rabbit.'`);
+        }
+        }
+
+        const animal = new Animal('Animal');
+        const rabbit = new Rabbit('Rabbit');
+
+        animal.speak(); // "Animal makes a noise."
+        rabbit.speak(); // "Rabbit says 'I am a rabbit.'"
+
+    </script>
+</body>
+</html>

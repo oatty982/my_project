@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function partial(func, ...argsBound) {
+	return function(...args) { // (*)
+		return func.call(this, ...argsBound, ...args);
+	}
+}
+
+// Usage:
+let user = {
+	firstName: "John",
+	say(time, phrase) {
+			console.log(`[${time}] ${this.firstName}: ${phrase}!`);
+	}
+};
+
+// add a partial method with fixed time
+user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes());
+
+
+    </script>
+</body>
+</html>

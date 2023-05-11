@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Usage
+let user = {
+		firstName: "John",
+		say(time, phrase) {
+			alert(`[${time}] ${this.firstName}: ${phrase}!`);
+		}// ฟังก์ชัน Say รับ argument 2 ตัว คือ 1. เวลา 2. คำ
+	};
+
+    function partial(func, argsBound) {
+
+// 1. func รับค่า say ฟังก์ชันเข้ามา และ เวลาปัจจุบัน จากการใช้ new Date()
+
+	return function(...args) { // (*)
+		return func.call(this, argsBound, ...args);
+	
+	}// 2. กำหนดค่า พารามิเตอร์ตัวแรก ของ say ให้เป็น ค่าเวลา แต่รับค่าข้อความมาเป็น พารามิเตอร์ตัวที่ 2
+}
+
+user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes()); // 1 and 2
+
+user.sayNow("Hello");
+
+// argument ตัวแรกเป็นค่าของ เวลาปัจจุบันที่ใช้ call กำหนดไว้ด้วย partial ฟังก์ชัน
+// argument ตัวที่สองเป็นค่าของที่รับเข้าไป
+// ผลลัพธ์จีงได้ [10:00] John: Hello!
+    </script>
+</body>
+</html>

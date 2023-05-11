@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // เขียน class User ในรูปแบบ pure functions
+
+        // 1. สร้าง constructor function
+        function User(name) {
+            this.name = name;
+        }
+
+        // เนื่องจาก function มี constructor property อยู่แล้ว
+        // เพราะฉะนั้นก็ไม่ต้องเขียนเพิ่ม
+
+        // 2. เพิ่ม Methods ไปใน prototype
+        User.prototype.sayHi = function() {
+            alert(this.name);
+        }
+    </script>
+</body>
+</html>

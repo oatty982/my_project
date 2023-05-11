@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let user = {
+	firstName: "John",
+	say(phrase) {
+		alert(`${phrase}, ${this.firstName}!`);
+	}
+};
+
+	let say = user.say.bind(user);
+	say("Hello"); // Hello, John
+	say("Bye"); // Bye, John
+
+    for (let key in user) {
+	if (typeof user[key] == 'function') {
+		user[key] = user[key].bind(user);
+	}
+}
+    </script>
+</body>
+</html>
